@@ -1,0 +1,15 @@
+{
+  "name": "fitted-ai",
+  "version": "1.0.0",
+  "description": "automatic portrait and uniform identity transfer pipeline",
+  "author": "Ghost",
+  "license": "MIT",
+  "scripts": {
+    "install:all": "pip install -r requirements.txt && npm --prefix frontend install && npm --prefix frontend run build",
+    "dev": "npm --prefix frontend run dev",
+    "build": "npm --prefix frontend run build",
+    "backend": "python -m uvicorn backend.main:app --reload --port 8000",
+    "backend:prod": "python -m uvicorn backend.main:app --host 0.0.0.0 --port 8000",
+    "test": "python -m unittest tests.test_pipeline"
+  }
+}

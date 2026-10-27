@@ -1,0 +1,74 @@
+# Node dependencies & build artifacts
+node_modules/
+frontend/node_modules/
+frontend/dist/
+dist/
+build/
+.npm
+*.tsbuildinfo
+
+# Python bytecode & environments
+__pycache__/
+*/__pycache__/
+*/*/__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.venv/
+ENV/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+/lib/
+/lib64/
+!frontend/src/lib/
+
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+.pytest_cache/
+
+# AI Model checkpoints (>100MB exceeds GitHub limits - download via scripts/download_models.py)
+models/**/*.onnx
+models/**/*.pth
+models/**/*.pt
+models/**/*.bin
+models/**/*.safetensors
+models/**/*.ckpt
+*.onnx
+*.pth
+
+# Temporary processing files & user uploads
+backend/temp/*
+!backend/temp/.gitkeep
+temp/
+*.tmp
+*.log
+
+# Environment variables & local secrets
+.env
+.env.local
+.env.*.local
+
+# OS & Editor generated files
+.DS_Store
+Thumbs.db
+ehthumbs.db
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Binaries & executables
+*.exe
+

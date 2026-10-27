@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  fitted-ai:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: fitted_ai_app
+    restart: unless-stopped
+    ports:
+      - "8000:8000"
+    environment:
+      - DEVICE=auto
+      - CORS_ORIGINS=["*"]
+    volumes:
+      - ./models:/app/models
+      - ./backend/temp:/app/backend/temp
